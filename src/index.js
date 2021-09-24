@@ -1,7 +1,7 @@
 import './pages/Beranda/index.js'
 import './pages/KatalogKelas/index.js'
 import './pages/Kontak/index.js'
-
+import './components/NavBar.js'
 const app = document.querySelector('#app')
 const halamanBeranda = document.createElement('halaman-beranda')
 const katalogKelas = document.createElement('katalog-kelas')
