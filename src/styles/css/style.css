@@ -1,0 +1,99 @@
+@keyframes fadedown {
+  from {
+    transform: translateY(-7.5rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes faderight {
+  from {
+    transform: translateX(-2.5rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@font-face {
+  font-family: "Nunito";
+  src: url("../../assets/fonts/nunito.ttf"), url("../../assets/fonts/Nunito-SemiBold.ttf") url("../../assets/fonts/Nunito-Light.ttf") url("../../assets/fonts/Nunito-Bold.ttf");
+}
+* {
+  font-family: "Nunito";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*:disabled {
+  cursor: not-allowed;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  color: #6b7280;
+  background-color: #fafafa;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  font-size: 1.5rem;
+  color: #565d69;
+  font-weight: 600;
+}
+body p,
+body span,
+body b,
+body em,
+body u {
+  font-size: 1rem;
+  color: #565d69;
+  font-weight: 300;
+}
+body a {
+  text-decoration: none;
+}
+@media (min-width: 1000px) {
+  body button,
+body a,
+body i.bi {
+    cursor: pointer;
+  }
+}
+body i.bi {
+  display: flex;
+  width: fit-content;
+}
+body input {
+  border: none;
+  background: transparent;
+}
+body input:focus {
+  outline: none;
+}
+body input:-webkit-autofill {
+  background-color: white;
+}
+body input::-ms-reveal, body input::-ms-clear {
+  display: none;
+}
+
+nav.navbar {
+  position: sticky;
+  top: 0px;
+  left: 0px;
+}
+
+/*# sourceMappingURL=style.css.map */

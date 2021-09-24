@@ -1,0 +1,23 @@
+@mixin anim($animation-type, $duration: 0.6s) {
+  animation: $animation-type $duration ease-in-out forwards;
+}
+@keyframes fadedown {
+  from {
+    transform: translateY(-7.5rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes faderight {
+  from {
+    transform: translateX(-2.5rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}

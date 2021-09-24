@@ -1,0 +1,9 @@
+@mixin over($overflow-type) {
+  overflow: $overflow-type;
+}
+@mixin over_x($overflow-type) {
+  overflow-x: $overflow-type;
+}
+@mixin over_y($overflow-type) {
+  overflow-y: $overflow-type;
+}

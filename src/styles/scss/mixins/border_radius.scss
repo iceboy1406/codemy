@@ -1,0 +1,8 @@
+@mixin rounded($radius) {
+  border-radius: #{$radius * 0.25rem};
+  @if $radius == circle {
+    border-radius: 50%;
+  } @else if $radius == semicircle {
+    border-radius: 999rem;
+  }
+}

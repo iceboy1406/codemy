@@ -1,0 +1,23 @@
+@mixin m($margin-size) {
+  margin: #{$margin-size * 0.25rem};
+}
+@mixin ml($margin-size) {
+  margin-left: #{$margin-size * 0.25rem};
+}
+@mixin mr($margin-size) {
+  margin-right: #{$margin-size * 0.25rem};
+}
+@mixin mt($margin-size) {
+  margin-top: #{$margin-size * 0.25rem};
+}
+@mixin mb($margin-size) {
+  margin-bottom: #{$margin-size * 0.25rem};
+}
+@mixin mx($margin-size) {
+  margin-left: #{$margin-size * 0.25rem};
+  margin-right: #{$margin-size * 0.25rem};
+}
+@mixin my($margin-size) {
+  margin-top: #{$margin-size * 0.25rem};
+  margin-bottom: #{$margin-size * 0.25rem};
+}

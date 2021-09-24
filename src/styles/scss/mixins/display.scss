@@ -1,0 +1,15 @@
+@mixin d_none {
+  display: none;
+}
+@mixin d_flex {
+  display: flex;
+}
+@mixin d_block {
+  display: block;
+}
+@mixin d_inline_flex {
+  display: inline-flex;
+}
+@mixin d_inline_block {
+  display: inline-block;
+}

@@ -1,0 +1,43 @@
+@use "sass:math";
+@mixin justify($justify) {
+  justify-content: $justify;
+  @if $justify == between {
+    justify-content: space-between;
+  } @else if $justify == around {
+    justify-content: space-around;
+  } @else if $justify == evenly {
+    justify-content: space-evenly;
+  }
+}
+@mixin items($align-items) {
+  align-items: $align-items;
+}
+@mixin fb($flex-basis) {
+  @if $flex-basis >= 1 and $flex-basis <= 12 {
+    flex-basis: #{math.div($flex-basis, 12) * 100%};
+  } @else {
+    @error "Value flex basis tidak sesuai, masukan antara 1-12";
+  }
+}
+@mixin fd($flex-direction) {
+  flex-direction: $flex-direction;
+  @if $flex-direction == col {
+    flex-direction: column;
+  } @else if $flex-direction == col_rev {
+    flex-direction: column-reverse;
+  } @else if $flex-direction == row_rev {
+    flex-direction: row-reverse;
+  }
+}
+@mixin fwrap($flex-wrap) {
+  flex-wrap: $flex-wrap;
+  @if $flex-wrap == no {
+    flex-wrap: nowrap;
+  } @else if $flex-wrap == n {
+    flex-wrap: nowrap;
+  } @else if $flex-wrap == y {
+    flex-wrap: wrap;
+  } @else if $flex-wrap == yes {
+    flex-wrap: wrap;
+  }
+}

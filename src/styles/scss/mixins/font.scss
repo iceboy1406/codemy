@@ -1,0 +1,9 @@
+@mixin fs($fontsize) {
+  font-size: #{($fontsize + 4) * 0.125rem};
+}
+@mixin fw($fontweight) {
+  font-weight: $fontweight;
+}
+@mixin align($text-align) {
+  text-align: $text-align;
+}

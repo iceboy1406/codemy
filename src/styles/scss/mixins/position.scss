@@ -1,0 +1,27 @@
+@mixin pos($position) {
+  position: $position;
+}
+@mixin l($left) {
+  left: #{$left * 0.25rem};
+}
+@mixin r($right) {
+  right: #{$right * 0.25rem};
+}
+@mixin t($top) {
+  top: #{$top * 0.25rem};
+}
+@mixin b($bottom) {
+  bottom: #{$bottom * 0.25rem};
+}
+@mixin l_min($left) {
+  left: #{-$left * 0.25rem};
+}
+@mixin r_min($right) {
+  right: #{-$right * 0.25rem};
+}
+@mixin t_min($top) {
+  top: #{-$top * 0.25rem};
+}
+@mixin b_min($bottom) {
+  bottom: #{-$bottom * 0.25rem};
+}
