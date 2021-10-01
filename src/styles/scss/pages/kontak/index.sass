@@ -1,0 +1,51 @@
+halaman-kontak
+  .kontak-banner
+    @include min_h(screen)
+    @include w(screen)
+    @include d_flex
+    @include fd(col)
+    @include items(center)
+    @include justify(center)
+    @include pt(22)
+    @include pb(11)
+    @media (min-width: 1000px)
+      @include fd(row)
+      @include pt(32)
+      @include pb(16)
+    .image-side
+      @include container
+      @include mb(4)
+      @media (min-width: 625px)
+        @include max_w(125)
+        @include mb(6)
+      @media (min-width: 1000px)
+        @include max_w(unset)
+        @include fb(6)
+      img
+        @include w(full)
+    .form-side
+      @include container
+      @media (min-width: 625px)
+        @include max_w(125)
+      @media (min-width: 1000px)
+        @include max_w(unset)
+        @include fb(6)
+      h1
+        @include mb(3)
+        @media (min-width: 1000px)
+          @include fs(10)
+      button.cta-submit
+        @include border($white, 0, 0)
+        @include py(3)
+        @include rounded(1)
+        @include bg($primary-color)
+        @include text($white)
+        @include fs(4)
+        @include w(full)
+        @include transition()
+        &:hover 
+          box-shadow: 0rem 0.25rem 1rem 0.0125rem transparentize($primary-color, 0.25)
+          background-color: lighten($primary-color, $amount: 0.5%)
+        &:active 
+          @include scale(0.95)
+          box-shadow: none

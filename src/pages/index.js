@@ -1,0 +1,7 @@
+import './Beranda/index.js'
+import './KatalogKelas/index.js'
+import './Kontak/index.js'
+import './LearningPath/index.js'
+import './TentangKami/index.js'
+import './Masuk/index.js'
+import './Daftar/index.js'

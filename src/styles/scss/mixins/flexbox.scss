@@ -1,4 +1,4 @@
-@use "sass:math";
+@use 'sass:math';
 @mixin justify($justify) {
   justify-content: $justify;
   @if $justify == between {
@@ -13,8 +13,10 @@
   align-items: $align-items;
 }
 @mixin fb($flex-basis) {
-  @if $flex-basis >= 1 and $flex-basis <= 12 {
-    flex-basis: #{math.div($flex-basis, 12) * 100%};
+  @if $flex-basis == unset {
+    flex-basis: unset;
+  } @else if $flex-basis >= 1 and $flex-basis <= 12 {
+    flex-basis: #{$flex-basis / 12 * 100%};
   } @else {
     @error "Value flex basis tidak sesuai, masukan antara 1-12";
   }
@@ -30,7 +32,6 @@
   }
 }
 @mixin fwrap($flex-wrap) {
-  flex-wrap: $flex-wrap;
   @if $flex-wrap == no {
     flex-wrap: nowrap;
   } @else if $flex-wrap == n {
@@ -39,5 +40,7 @@
     flex-wrap: wrap;
   } @else if $flex-wrap == yes {
     flex-wrap: wrap;
+  } @else {
+    flex-wrap: $flex-wrap;
   }
 }

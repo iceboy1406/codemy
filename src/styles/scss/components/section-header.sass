@@ -1,0 +1,36 @@
+.section-header
+  @include container
+  @include mb(6)
+  @include d_flex
+  @include fd(col)
+  @include items(center)
+  @media (min-width: 1400)
+    @include mb(7)
+  @media (min-width: 1600)
+    @include mb(8)
+  @media (min-width: 1600)
+    @include mb(10)
+  .badge 
+    @include px(3)
+    @include py(1.5)
+    @include mb(1)
+    @include rounded(semicircle)
+    @include bg($primary-color)
+    @include text($white)
+    @include fs(3)
+    @include fw(600)
+    @include w(fit)
+    @media (min-width: 1200px)
+      @include px(4.5)
+
+  .title
+    @include align(center)
+    @media (min-width: 625px) 
+      @include max_w(125)
+    
+    @media (min-width: 1000px) 
+      @include fs(10)
+      @include max_w(150)
+    @media (min-width: 1400px) 
+      @include fs(12)
+      @include max_w(175)

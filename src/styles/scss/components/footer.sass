@@ -1,0 +1,77 @@
+footer
+  @inclue w(screen)
+  @include container
+  @include py(10)
+  @include bg($primary-color)
+  @include d_flex
+  @include fd(col)
+  @media (min-width: 1000px)
+    @include fd(row)
+  .company-information
+    @media (min-width: 1000px)
+      @include fb(5)
+      @include pr(8)
+    a.nav-brand
+      @include d_flex
+      @include fs(5)
+      @include items(center)
+      @include text($white)
+      img 
+        @include w(8)
+        @include h(8)
+        @include mr(3)
+    p.company-description
+      @include text($white)
+      @include mt(4)
+    p.company-copyright
+      @include text($white)
+      @include mt(2)
+  .menu
+    @include mt(6)
+    @media (min-width: 1000px)
+      @include mt(0)
+      @include px(4)
+      @include fb(2)
+    @media (min-width: 1200px)
+      @include px(8)
+    h1 
+      @include text($white)
+      @include mb(3)
+    .menu-list
+      @include d_flex
+      @include fd(col)
+      a
+        @include text($white)
+        @include mb(2)
+        &:hover
+          @include text($white, .75)
+  .social-media
+    @include mt(6)
+    @media (min-width: 1000px)
+      @include mt(0)
+      @include px(8)
+      @include fb(2)
+    h1
+      @include text($white)
+      @include mb(3)
+    .social-media-list
+      @include d_flex
+      a
+        @include text($white)
+        @include mr(3)
+        &:hover
+          @include text($white, .75)
+        svg
+          @include w(5)
+          @include h(5)
+  .alamat
+    @include mt(6)
+    @media (min-width: 1000px)
+      @include fb(3)
+      @include mt(0)
+      @include px(8)
+    h1
+      @include text($white)
+      @include mb(3)
+    p 
+      @include text($white)

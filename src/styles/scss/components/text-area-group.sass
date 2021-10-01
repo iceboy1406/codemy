@@ -1,0 +1,19 @@
+.text-area-group 
+  @include mb(2)
+  label
+    @include fs(4)
+    @include mb(2)
+    @include d_block
+    @include w(max)
+  textarea
+    @include border($main-border-color, .5)
+    @include bg($main-border-color, .25)
+    @include px(4)
+    @include py(3)
+    @include fs(4)
+    @include w(full)
+    @include min_h(30)
+    @include rounded(1)
+    &:focus
+      @include bg($white)
+      @include border($primary-color)

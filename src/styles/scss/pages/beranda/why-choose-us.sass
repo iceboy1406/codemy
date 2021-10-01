@@ -1,0 +1,43 @@
+section.why-choose-us
+  @include py(8)
+  
+  .why-choose-us-list
+    @include container
+    @include d_flex
+    @include fwrap(y)
+    @include justify(center)
+    @include items(center)
+
+    .why-choose-us-list-item 
+      @include py(5) 
+      @include px(5) 
+      @include rounded(4) 
+      @include bg($white, 1)
+      @include fb(12)
+      @include mb(4) 
+      @include transition()
+      @media (min-width: 625px)
+        @include max_w(125)
+      @media (min-width: 1000px)
+        @include max_w(unset)
+        @include fb(3.5)
+        @include mx(3)
+        @include my(3)
+      @media (min-width: 1200px)
+        &:last-child
+          @include fb(4)
+      @media (min-width: 1200px)
+        &:last-child
+          @include fb(3.5)
+      @media (min-width: 1800px)
+        @include fb(3)
+      &:hover 
+        @include scale(1.015)
+
+      .icon 
+        @include w(20) 
+        @include h(20)
+        @include mb(4)
+      .heading-text
+        @include mb(2) 
+

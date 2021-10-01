@@ -21,3 +21,13 @@
     opacity: 1;
   }
 }
+@keyframes fadeup {
+  from {
+    transform: translateY(2.5rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}

@@ -1,8 +1,13 @@
 @mixin rounded($radius) {
-  border-radius: #{$radius * 0.25rem};
   @if $radius == circle {
     border-radius: 50%;
   } @else if $radius == semicircle {
     border-radius: 999rem;
+  } @else {
+    border-radius: #{$radius * 0.25rem};
   }
+}
+@mixin rounded_adv($radius1, $radius2, $radius3, $radius4) {
+  border-radius: #{$radius1 * 0.25rem} #{$radius2 * 0.25rem} #{$radius3 *
+    0.25rem} #{$radius4 * 0.25rem};
 }

@@ -1,11 +1,23 @@
 @mixin text($color, $opacity: 1) {
-  color: transparentize($color, 1 - $opacity);
+  @if $color == unset {
+    color: unset;
+  } @else {
+    color: transparentize($color, 1 - $opacity);
+  }
 }
 @mixin bg($color, $opacity: 1) {
-  background-color: transparentize($color, 1 - $opacity);
+  @if $color == unset {
+    background-color: unset;
+  } @else {
+    background-color: transparentize($color, 1 - $opacity);
+  }
 }
 @mixin outline($color, $opacity: 1) {
-  box-shadow: 0 0 0 0.25rem transparentize($color, 1 - $opacity);
+  @if $color == unset {
+    box-shadow: unset;
+  } @else {
+    box-shadow: 0 0 0 0.25rem transparentize($color, 1 - $opacity);
+  }
 }
 @mixin border(
   $border-color: $main-border-color,
@@ -13,6 +25,67 @@
   $border-width: 1px,
   $border-type: solid
 ) {
-  border: $border-width $border-type
-    transparentize($border-color, 1 - $border-opacity);
+  @if $border-color == unset {
+    border: unset;
+  } @else {
+    border: $border-width
+      $border-type
+      transparentize($border-color, 1 - $border-opacity);
+  }
+}
+@mixin border_l(
+  $border-color: $main-border-color,
+  $border-opacity: 1,
+  $border-width: 1px,
+  $border-type: solid
+) {
+  @if $border-color == unset {
+    border-left: unset;
+  } @else {
+    border-left: $border-width
+      $border-type
+      transparentize($border-color, 1 - $border-opacity);
+  }
+}
+@mixin border_r(
+  $border-color: $main-border-color,
+  $border-opacity: 1,
+  $border-width: 1px,
+  $border-type: solid
+) {
+  @if $border-color == unset {
+    border-right: unset;
+  } @else {
+    border-right: $border-width
+      $border-type
+      transparentize($border-color, 1 - $border-opacity);
+  }
+}
+@mixin border_t(
+  $border-color: $main-border-color,
+  $border-opacity: 1,
+  $border-width: 1px,
+  $border-type: solid
+) {
+  @if $border-color == unset {
+    border-top: unset;
+  } @else {
+    border-top: $border-width
+      $border-type
+      transparentize($border-color, 1 - $border-opacity);
+  }
+}
+@mixin border_b(
+  $border-color: $main-border-color,
+  $border-opacity: 1,
+  $border-width: 1px,
+  $border-type: solid
+) {
+  @if $border-color == unset {
+    border-bottom: unset;
+  } @else {
+    border-bottom: $border-width
+      $border-type
+      transparentize($border-color, 1 - $border-opacity);
+  }
 }

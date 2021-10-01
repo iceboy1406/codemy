@@ -1,0 +1,12 @@
+@mixin translateX($radius) {
+  @if $radius == 100vw {
+    transform: translateX(100vw);
+  } @else if $radius == -100vw {
+    transform: translateX(-100vw);
+  } @else {
+    transform: translateX(#{$radius * 0.25rem});
+  }
+}
+@mixin scale($scale) {
+  transform: scale($scale);
+}

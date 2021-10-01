@@ -11,7 +11,7 @@
   padding-top: #{$padding-size * 0.25rem};
 }
 @mixin pb($padding-size) {
-  padding: #{$padding-size * 0.25rem};
+  padding-bottom: #{$padding-size * 0.25rem};
 }
 @mixin px($padding-size) {
   padding-left: #{$padding-size * 0.25rem};

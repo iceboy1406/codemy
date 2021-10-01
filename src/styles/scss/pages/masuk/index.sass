@@ -1,0 +1,68 @@
+.auth-container
+  @include min_h(screen)
+  @include w(screen)
+  @include d_flex
+  @include fd(col)
+  .auth-card
+    @include d_flex
+    @include w(screen)
+    @include h(screen)
+    @include justify(center)
+    @media (min-width: 625px)
+      @include items(center)
+    .image-group
+      @include d_none
+      @media (min-width: 1000px)
+        @include d_flex
+        @include items(center)
+        @include fb(6)
+        @include h(full)
+        @include container
+        background: radial-gradient(132.75% 177.35% at 8.26% -22.75%, #4C02F1 0%, #4C02F1 0.4%, #4B02EF 0.8%, #3802C3 12.6%, #29029E 24.9%, #1C037F 37.7%, #120367 51%, #0B0357 65.1%, #07034D 80.6%, #06044A 100%)
+      img
+        @include w(full)
+    .auth-form-group
+      @include container
+      @include py(7.5)
+      @media (min-width: 625px)
+        @include max_w(125)
+      @media (min-width: 1000px)
+        @include max_w(unset)
+        @include fb(6)
+      a.back-to-home
+        @include d_flex
+        @include items(center)
+        @include text($primary-color)
+        @include fs(5)
+        @include mb(3)
+        svg
+          @include w(5)
+          @include h(5)
+          @include mr(2)
+          @include d_flex
+      h1
+        @include mb(6)
+        @media (min-width: 1400px)
+          @include fs(12)
+        @media (min-width: 1800px)
+          @include fs(14)
+      button
+        @include border($white, 0, 0)
+        @include py(3)
+        @include rounded(1)
+        @include bg($primary-color)
+        @include text($white)
+        @include fs(4)
+        @include w(full)
+        @include transition()
+        &:hover 
+          box-shadow: 0rem 0.25rem 1rem 0.0125rem transparentize($primary-color, 0.25)
+          background-color: lighten($primary-color, $amount: 0.5%)
+        &:active 
+          @include scale(0.95)
+          box-shadow: none
+      p.belum-punya-akun, p.sudah-punya-akun
+        @include mt(6)
+        @include align(center)
+        a 
+          @include text($primary-color)

@@ -1,0 +1,25 @@
+section.telah-dipercaya 
+  @include py(8)
+  @include px(6)
+  @include d_flex
+  @include fd(col)
+  @include items(center)
+  .perusahaan-list 
+    @include container
+    @include d_flex
+    @include fwrap(y)
+    @include justify(center)
+    .perusahaan-list-item 
+      img 
+        @include w(25)
+        @include transition()
+        @media (min-width: 625px) 
+          @include w(30)
+        @media (min-width: 1000px) 
+          @include w(32.5)
+        @media (min-width: 1400px) 
+          @include w(37.5)
+        &:hover 
+          @include scale(1.125)
+
+

@@ -1,0 +1,54 @@
+.katalog-kelas
+  @include container
+  header
+    @include d_flex
+    @include fd(col)
+    @include py(8)
+    @media (min-width: 1000px)
+      @include items(center)
+    input
+      @include w(full)
+      @media (min-width: 1000px)
+        @include w(175)
+  .katalog-kelas-list
+    @include pb(10)
+    @include d_flex
+    @include fwrap(y)
+    @include justify(center)
+    @include w(screen)
+    @include over(scroll)
+    @include w(full)
+    .katalog-kelas-list-item
+      @include w(full)
+      @include p(3)
+      @include bg($white)
+      @include rounded(3)
+      @include mb(4)
+      @media (min-width: 625px)
+        @include max_w(125)
+      @media (min-width: 1000px)
+        @include max_w(unset)
+        @include w(65)
+        @include mr(4)
+      img.class-photo 
+        @include w(full)
+        @include rounded(4)
+      h1.class-name 
+        @include fs(6)
+        @include fw(400)
+        @include mb(1)
+      .rating-group
+        @include d_flex
+        @include items(center)
+        @include mb(1)
+        .rating
+          @include mr(1.5)
+        svg
+          @include text($warning-color)
+          @include d_flex
+          @include mr(.5)
+        .students-count
+          @include ml(1)
+      .price
+        @include ml(1)
+        @include fw(600)

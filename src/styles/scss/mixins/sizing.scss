@@ -9,6 +9,8 @@
     width: min-content;
   } @else if $width == fit {
     width: fit-content;
+  } @else if $width == unset {
+    width: unset;
   } @else {
     width: #{$width * 0.25rem};
   }
@@ -24,6 +26,8 @@
     max-width: min-content;
   } @else if $width == fit {
     max-width: fit-content;
+  } @else if $width == unset {
+    max-width: unset;
   } @else {
     max-width: #{$width * 0.25rem};
   }
@@ -39,6 +43,8 @@
     min-width: min-content;
   } @else if $width == fit {
     min-width: fit-content;
+  } @else if $width == unset {
+    min-width: unset;
   } @else {
     min-width: #{$width * 0.25rem};
   }
@@ -54,6 +60,8 @@
     height: min-content;
   } @else if $height == fit {
     height: fit-content;
+  } @else if $height == unset {
+    height: unset;
   } @else {
     height: #{$height * 0.25rem};
   }
@@ -69,6 +77,8 @@
     max-height: min-content;
   } @else if $height == fit {
     max-height: fit-content;
+  } @else if $height == unset {
+    max-height: unset;
   } @else {
     max-height: #{$height * 0.25rem};
   }
@@ -84,7 +94,27 @@
     min-height: min-content;
   } @else if $height == fit {
     min-height: fit-content;
+  } @else if $height == unset {
+    min-height: unset;
   } @else {
     min-height: #{$height * 0.25rem};
+  }
+}
+@mixin container {
+  @include px(6);
+  @media (min-width: 1000px) {
+    @include px(10);
+  }
+  @media (min-width: 1200px) {
+    @include px(14);
+  }
+  @media (min-width: 1400px) {
+    @include px(18);
+  }
+  @media (min-width: 1600px) {
+    @include px(22);
+  }
+  @media (min-width: 1800px) {
+    @include px(28);
   }
 }

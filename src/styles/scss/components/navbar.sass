@@ -1,0 +1,162 @@
+nav.navbar
+  @include pos(fixed)
+  @include t(0)
+  @include l(0)
+  @include py(3)
+  @include d_flex
+  @include items(center)
+  @include bg($white)
+  @include container
+  @include w(full)
+  z-index: 999
+  &.when-sidebar-open
+    background-color: unset
+    backdrop-filter: unset
+  
+  .sidebar-toggle
+    @include mr(2)
+    @include max_h(6)
+    cursor: pointer
+    @media (min-width: 1000px)
+      @include d_none
+    
+    svg
+      @include w(6)
+      @include h(6)
+  
+  .nav-brand
+    @include fw(600)
+    @include fs(5)
+    @include d_flex
+    @include items(center)
+    @media (min-width: 1000px)
+      @include fs(6)
+    img
+      @include w(5.5)
+      @include h(5.5)
+      @include mr(2)
+      @media (min-width: 1000px)
+        @include w(7)
+        @include h(7)
+        @include mr(3)
+  
+  .nav-item
+    @include pos(fixed)
+    @include w(screen)
+    @include h(screen)
+    @include t(0)
+    @include l(0)
+    @include d_flex
+    @include transition()
+    @include translateX(-100vw)
+
+    @media (min-width: 1000px)
+      @include pos(static)
+      @include w(full)
+      @include h(unset)
+      transform: unset
+    
+    &.show
+      @include translateX(0)
+    
+    .nav-list
+      @include fb(6)
+      @include min_w(62.5)
+      @include max_w(100)
+      @include d_flex
+      @include fd(col)
+      @include justify(between)
+      @include p(3)
+      @include bg($white)
+      @include border_r($white, 0.85, 1.5px)
+      @media (min-width: 1000px)
+        @include pos(static)
+        @include w(full)
+        @include h(fit)
+        @include p(0)
+        @include fd(row)
+        @include max_w(unset)
+        @include min_w(unset)
+        @include bg(unset)
+        @include blur(0)
+        @include items(center)
+        @include border_r(unset)
+        @include ml(16)
+        flex-basis: unset
+      
+      .nav-link-group
+        @include d_flex
+        @include fd(col)
+        @media (min-width: 1000px)
+          @include fd(row)
+        
+        .nav-link
+          @include px(4)
+          @include py(2)
+          @include mb(1)
+          @include rounded(1)
+          @media (min-width: 1000px)
+            @include fs(4)
+            @include ml(2)
+            @include mb(0)
+            @include pos(relative)
+            @include px(5)
+            @include px(2)
+          
+          @media (min-width: 1800px)
+            @include fs(5)
+          
+          &.active
+            @include bg($primary-color)
+            @include text($white)
+            @media (min-width: 1000px)
+              @include bg(unset)
+              @include text($primary-color)
+
+      .auth
+        @include d_flex
+        .masuk,
+        .daftar
+          @include d_flex
+          @include fb(6)
+          @include px(4)
+          @include py(2)
+          @include justify(center)
+          @include rounded(1)
+          @media (min-width: 1000px)
+            flex-basis: unset
+            @include px(6)
+            @include py(2)
+            @include fs(4)
+          
+          @media (min-width: 1800px)
+            @include fs(5)
+            @include px(8)
+            @include py(3)
+          
+        .masuk
+          @include bg($primary-color)
+          @include text($white)
+          @include mr(2)
+        
+        .daftar
+          @include ml(1)
+          @include bg($primary-color, 0.25)
+          @include text($primary-color)
+
+    .sidebar-close-area
+      @include w(full)
+      @include h(full)
+      @media (min-width: 1000px)
+        @include d_none
+      
+@keyframes navLinkActiveBeforeAnim
+  from
+    width: 0px
+    height: 0px
+  
+  to
+    width: 50%
+    height: 2.5px
+  
+

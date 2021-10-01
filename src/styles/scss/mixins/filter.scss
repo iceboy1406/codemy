@@ -1,0 +1,6 @@
+@mixin blur($blur-radius) {
+  backdrop-filter: blur(#{$blur-radius * 0.25rem});
+}
+@mixin grayscale($radius) {
+  filter: grayscale($radius);
+}

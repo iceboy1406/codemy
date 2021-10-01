@@ -1,11 +1,39 @@
 class Navbar extends HTMLElement {
   connectedCallback() {
     this.render()
+    this.sideBarToggleHandler()
+    this.activeNavLinkHandler()
+  }
+  sideBarToggleHandler() {
+    const navBar = this.querySelector('nav.navbar')
+    const navItem = this.querySelector('.nav-item')
+    const sidebarToggle = this.querySelector('.sidebar-toggle')
+    const sidebarCloseArea = this.querySelector('.sidebar-close-area')
+    sidebarToggle.addEventListener('click', () => {
+      navItem.classList.add('show')
+      navBar.classList.add('when-sidebar-open')
+    })
+    sidebarCloseArea.addEventListener('click', () => {
+      navItem.classList.remove('show')
+      navBar.classList.remove('when-sidebar-open')
+    })
+  }
+  activeNavLinkHandler() {
+    if (location.pathname === '/index.html') {
+      document.querySelector('[data-href="/"].nav-link').classList.add('active')
+    } else {
+      document
+        .querySelector('[data-href="/"].nav-link')
+        .classList.remove('active')
+      document
+        .querySelector(`[data-href="${location.pathname}"].nav-link`)
+        .classList.add('active')
+    }
   }
   render() {
     this.innerHTML = `
     <nav class="navbar">
-      <div className="sidebar-toggle">
+      <div class="sidebar-toggle">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"
@@ -20,16 +48,25 @@ class Navbar extends HTMLElement {
           />
         </svg>
       </div>
-      <div className="nav-brand">Codemy</div>
-      <div className="nav-item">
-        <div className="nav-list">
-          <a data-href="/">Beranda</a>
-          <a data-href="/katalog-kelas/">Katalog Kelas</a>
-          <a data-href="/learning-path/">Learning Path</a>
-          <a data-href="/tentang-kami/">Tentang Kami</a>
-          <a data-href="/kontak/">Kontak</a>
+      <a data-href="/" class="nav-brand">
+        <img src="/src/assets/icons/brand-logo.svg" alt="" />  
+      Codemy
+      </a>
+      <div class="nav-item">
+        <div class="nav-list">
+        <div class="nav-link-group">
+          <a class="nav-link" data-href="/">Beranda</a>
+          <a class="nav-link" data-href="/katalog-kelas/">Katalog Kelas</a>
+          <a class="nav-link" data-href="/learning-path/">Learning Path</a>
+          <a class="nav-link" data-href="/tentang-kami/">Tentang Kami</a>
+          <a class="nav-link" data-href="/kontak/">Kontak</a>
+          </div>
+          <div class="auth">
+            <a class="masuk" data-href="/masuk/">Masuk</a>
+            <a class="daftar" data-href="/daftar/">Daftar</a>
+          </div>
         </div>
-        <div className="sidebar-close">
+        <div class="sidebar-close-area">
         </div>
       </div>
     </nav>

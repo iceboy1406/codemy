@@ -1,0 +1,89 @@
+section.home-banner
+  @include container
+  @include py(5)
+  @include d_flex
+  @include fd(col_rev)
+  @include justify(center)
+  @include items(center)
+  min-height: calc(100vh - 49px)
+  @media (min-width: 1000px) 
+    @include fd(row)
+    @include justify(between)
+    min-height: calc(100vh - 66px)
+  
+  .caption 
+    @media (min-width: 625px) 
+      @include max_w(125)
+    @media (min-width: 1000px) 
+      @include max_w(unset)
+      @include fb(6)
+      @include pr(10)
+    @media (min-width: 1400px) 
+      @include fb(5.5)
+    @media (min-width: 1800px) 
+      @include fb(5)
+    h1 
+      @include mb(2)
+      @include fs(10)
+      @media (min-width: 1000px) 
+        @include fs(12)
+      @media (min-width: 1200px) 
+        @include fs(14)
+      @media (min-width: 1400px) 
+        @include fs(14)
+      @media (min-width: 1550px) 
+        @include fs(16)
+      @media (min-width: 1800) 
+        @include fs(28)
+    p 
+      @include mb(4)
+      @include fs(5)
+      @media (min-width: 1000px) 
+        @include mb(6)
+      @media (min-width: 1400px) 
+        @include fs(6.5)
+      @media (min-width: 1550px) 
+        @include fs(7.5)
+      
+    button.cta-button 
+      @include border($white, 0, 0)
+      @include px(6)
+      @include py(3)
+      @include rounded(1)
+      @include bg($primary-color)
+      @include text($white)
+      @include fs(4)
+      @include w(full)
+      @include transition()
+      &:hover 
+        box-shadow: 0rem 0.25rem 1rem 0.0125rem transparentize($primary-color, 0.25)
+        background-color: lighten($primary-color, $amount: 0.5%)
+      &:active 
+        @include scale(0.95)
+        box-shadow: none
+      @media (min-width: 1000px) 
+        @include w(fit)
+      @media (min-width: 1550px) 
+        @include px(8)
+        @include py(4)
+        @include fs(5)
+
+  .image 
+    @include mb(5)
+    @media (min-width: 625px) 
+      @include max_w(125)
+    
+    @media (min-width: 1000px) 
+      @include fb(6)
+      @include pl(8)
+      @include max_w(unset)
+    
+    @media (min-width: 1400px) 
+      @include pl(6)
+    
+    img 
+      @include w(full)
+      @include rounded_adv(12, 0, 12, 0)
+    
+  
+

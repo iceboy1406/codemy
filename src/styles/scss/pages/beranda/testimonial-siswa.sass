@@ -1,0 +1,59 @@
+section.testimonial-siswa
+  @include py(10)
+  @include d_flex
+  @include fd(col)
+  @include justify(center)
+  @include items(center)
+  .testimonial-container
+    @include container
+    @include d_flex
+    @include fd(col)
+    @include justify(center)
+    @include items(center)
+    @include align(center)
+    @include mb(6)
+    @include min_h(90)    
+    &.anim
+      @include anim(fadeup)
+    @media (min-width: 625px)
+      @include max_w(150)    
+    @media (min-width: 1600px)
+      @include max_w(165)    
+    img 
+      @include w(35)
+      @include h(35)
+      @include rounded(circle)
+      @include mb(4)
+      border-radius: 50% 50% 50% 0px
+      @media (min-width: 1800px)
+        @include w(40)
+        @include h(40)
+    .kelas
+      @include mb(4)
+  .testimonial-select-list
+    @include container
+    @include d_flex
+    @include max_w(full)
+    @include justify(between)
+    @media (min-width: 625px)
+      @include max_w(100)    
+    @media (min-width: 1000px)
+      @include max_w(110)    
+    @media (min-width: 1200px)
+      @include max_w(125)    
+    @media (min-width: 1800px)
+      @include max_w(150)    
+    .testimonial-select-item
+      @include fb(2)
+      @include p(.5)
+      @include h(max)
+      @include rounded(circle)
+      @include border($primary-color, 0, 2px)
+      @media (min-width: 1000px)
+        cursor: pointer
+      &.active
+        @include border($primary-color, 1, 2px)
+      img 
+        @include w(full)
+        @include d_flex
+        @include rounded(circle)
