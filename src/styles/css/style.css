@@ -218,8 +218,6 @@ nav.navbar .nav-item .nav-list {
   display: flex;
   flex-direction: col;
   flex-direction: column;
-  justify-content: between;
-  justify-content: space-between;
   padding: 0.75rem;
   background-color: white;
   border-right: 1.5px solid rgba(255, 255, 255, 0.85);
@@ -288,6 +286,7 @@ nav.navbar .nav-item .nav-list .nav-link-group .nav-link.active {
 }
 nav.navbar .nav-item .nav-list .auth {
   display: flex;
+  margin-top: 2.5rem;
 }
 nav.navbar .nav-item .nav-list .auth .masuk,
 nav.navbar .nav-item .nav-list .auth .daftar {
