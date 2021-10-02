@@ -236,6 +236,8 @@ nav.navbar .nav-item .nav-list {
     align-items: center;
     border-right: unset;
     margin-left: 4rem;
+    justify-content: between;
+    justify-content: space-between;
     flex-basis: unset;
   }
 }
@@ -287,6 +289,11 @@ nav.navbar .nav-item .nav-list .nav-link-group .nav-link.active {
 nav.navbar .nav-item .nav-list .auth {
   display: flex;
   margin-top: 2.5rem;
+}
+@media (min-width: 1000px) {
+  nav.navbar .nav-item .nav-list .auth {
+    margin-top: 0rem;
+  }
 }
 nav.navbar .nav-item .nav-list .auth .masuk,
 nav.navbar .nav-item .nav-list .auth .daftar {
@@ -650,14 +657,14 @@ footer .alamat p {
 section.home-banner {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
   display: flex;
   flex-direction: col_rev;
   flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
-  min-height: calc(100vh - 49px);
+  padding-bottom: 2.75rem;
+  padding-top: 5.5rem;
+  min-height: 100vh;
 }
 @media (min-width: 1000px) {
   section.home-banner {
@@ -694,7 +701,8 @@ section.home-banner {
     flex-direction: row;
     justify-content: between;
     justify-content: space-between;
-    min-height: calc(100vh - 66px);
+    padding-bottom: 4rem;
+    padding-top: 8rem;
   }
 }
 @media (min-width: 625px) {
@@ -1446,12 +1454,14 @@ section.testimonial-siswa .testimonial-select-list .testimonial-select-item img 
   display: flex;
   flex-direction: col;
   flex-direction: column;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 5rem;
+  padding-bottom: 2.75rem;
 }
 @media (min-width: 1000px) {
   .katalog-kelas header {
     align-items: center;
+    padding-top: 8rem;
+    padding-bottom: 4rem;
   }
 }
 .katalog-kelas header input {

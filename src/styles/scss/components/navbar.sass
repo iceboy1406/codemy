@@ -81,6 +81,7 @@ nav.navbar
         @include items(center)
         @include border_r(unset)
         @include ml(16)
+        @include justify(between)
         flex-basis: unset
       
       .nav-link-group
@@ -115,6 +116,8 @@ nav.navbar
       .auth
         @include d_flex
         @include mt(10)
+        @media (min-width: 1000px)
+          @include mt(0)
         .masuk,
         .daftar
           @include d_flex

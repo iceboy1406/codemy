@@ -1,15 +1,17 @@
 section.home-banner
   @include container
-  @include py(5)
   @include d_flex
   @include fd(col_rev)
   @include justify(center)
   @include items(center)
-  min-height: calc(100vh - 49px)
+  @include pb(11)
+  @include pt(22)
+  @include min_h(screen)
   @media (min-width: 1000px) 
     @include fd(row)
     @include justify(between)
-    min-height: calc(100vh - 66px)
+    @include pb(16)
+    @include pt(32)
   
   .caption 
     @media (min-width: 625px) 
