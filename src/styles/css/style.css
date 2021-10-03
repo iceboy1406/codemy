@@ -424,6 +424,15 @@ nav.navbar .nav-item .sidebar-close-area {
   font-weight: 600;
   width: fit-content;
 }
+@media (min-width: 500px) {
+  .section-header .badge {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 0.9375rem;
+  }
+}
 @media (min-width: 1200px) {
   .section-header .badge {
     padding-left: 1.125rem;
@@ -1669,6 +1678,189 @@ halaman-kontak .kontak-banner .form-side button.cta-submit:hover {
 halaman-kontak .kontak-banner .form-side button.cta-submit:active {
   transform: scale(0.95);
   box-shadow: none;
+}
+
+learning-path {
+  min-height: 100vh;
+}
+learning-path main header {
+  padding-top: 5.5rem;
+  padding-bottom: 2.75rem;
+}
+@media (min-width: 1000px) {
+  learning-path main header {
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+  }
+}
+learning-path main .learning-path-list {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+@media (min-width: 1000px) {
+  learning-path main .learning-path-list {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  learning-path main .learning-path-list {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+}
+@media (min-width: 1400px) {
+  learning-path main .learning-path-list {
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+  }
+}
+@media (min-width: 1600px) {
+  learning-path main .learning-path-list {
+    padding-left: 5.5rem;
+    padding-right: 5.5rem;
+  }
+}
+@media (min-width: 1800px) {
+  learning-path main .learning-path-list {
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+}
+learning-path main .learning-path-list .learning-path-list-item {
+  flex-basis: 100%;
+  padding: 1.25rem;
+  background-color: white;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  transition: 0.3s;
+  height: max-content;
+}
+@media (min-width: 625px) {
+  learning-path main .learning-path-list .learning-path-list-item {
+    max-width: 31.25rem;
+  }
+}
+@media (min-width: 1000px) {
+  learning-path main .learning-path-list .learning-path-list-item {
+    max-width: unset;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    flex-basis: 31.25%;
+  }
+}
+@media (min-width: 1200px) {
+  learning-path main .learning-path-list .learning-path-list-item {
+    flex-basis: 25%;
+    margin-bottom: 1.5rem;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+  }
+}
+learning-path main .learning-path-list .learning-path-list-item:hover {
+  transform: scale(1.05);
+}
+learning-path main .learning-path-list .learning-path-list-item img {
+  width: 6.25rem;
+  margin-bottom: 1rem;
+}
+learning-path main .learning-path-list .learning-path-list-item h1 {
+  margin-bottom: 0.25rem;
+}
+learning-path main .learning-path-list .learning-path-list-item p {
+  margin-bottom: 0.75rem;
+}
+learning-path main .learning-path-list .learning-path-list-item button {
+  border: 0 solid rgba(255, 255, 255, 0);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.25rem;
+  background-color: #555fb9;
+  color: white;
+  font-size: 1rem;
+  width: 100%;
+  transition: 0.3s;
+}
+@media (min-width: 1200px) {
+  learning-path main .learning-path-list .learning-path-list-item button {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+}
+learning-path main .learning-path-list .learning-path-list-item button:hover {
+  box-shadow: 0rem 0.25rem 1rem 0.0125rem rgba(85, 95, 185, 0.75);
+  background-color: #5761ba;
+}
+learning-path main .learning-path-list .learning-path-list-item button:active {
+  transform: scale(0.95);
+  box-shadow: none;
+}
+
+tentang-kami main {
+  padding-top: 5.5rem;
+  padding-bottom: 5.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  display: flex;
+  flex-direction: col;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 1000px) {
+  tentang-kami main {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  tentang-kami main {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+}
+@media (min-width: 1400px) {
+  tentang-kami main {
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+  }
+}
+@media (min-width: 1600px) {
+  tentang-kami main {
+    padding-left: 5.5rem;
+    padding-right: 5.5rem;
+  }
+}
+@media (min-width: 1800px) {
+  tentang-kami main {
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+}
+@media (min-width: 625px) {
+  tentang-kami main {
+    max-width: 31.25rem;
+    margin: auto;
+  }
+}
+@media (min-width: 1000px) {
+  tentang-kami main {
+    max-width: 70%;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+tentang-kami main img {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  max-width: 25rem;
+}
+tentang-kami main p {
+  text-align: justify;
 }
 
 /*# sourceMappingURL=style.css.map */

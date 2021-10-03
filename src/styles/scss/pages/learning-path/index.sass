@@ -1,0 +1,59 @@
+learning-path
+  @include min_h(screen)
+  main
+    header
+      @include pt(22)
+      @include pb(11)
+      @media (min-width: 1000px)
+        @include pt(32)
+        @include pb(16)
+    .learning-path-list
+      @include container
+      @include d_flex
+      @include justify(center)
+      @include pb(10)
+      @include fwrap(y)
+      .learning-path-list-item
+        @include fb(12)
+        @include p(5)
+        @include bg($white)
+        @include rounded(4)
+        @include mb(4)
+        @include transition
+        @include h(max)
+        @media (min-width: 625px)
+          @include max_w(125)
+        @media (min-width: 1000px)
+          @include max_w(unset)
+          @include mx(2)
+          @include fb(3.75)
+        @media (min-width: 1200px)
+          @include fb(3)
+          @include mb(6)
+          @include mx(3)
+        &:hover
+          @include scale(1.05)
+        img
+          @include w(25)
+          @include mb(4)
+        h1
+          @include mb(1)
+        p
+          @include mb(3)
+        button 
+          @include border($white, 0, 0)
+          @include py(2)
+          @include rounded(1)
+          @include bg($primary-color)
+          @include text($white)
+          @include fs(4)
+          @include w(full)
+          @include transition()
+          @media (min-width: 1200px)
+            @include py(3)
+          &:hover 
+            box-shadow: 0rem 0.25rem 1rem 0.0125rem transparentize($primary-color, 0.25)
+            background-color: lighten($primary-color, $amount: 0.5%)
+          &:active 
+            @include scale(0.95)
+            box-shadow: none

@@ -10,6 +10,7 @@ const tentangKami = document.createElement('tentang-kami')
 const halamanLogin = document.createElement('halaman-login')
 const halamanSignup = document.createElement('halaman-signup')
 const renderPage = (pathName) => {
+  window.scrollTo(0, 0)
   switch (pathName) {
     case '/':
       history.pushState(null, null, pathName)

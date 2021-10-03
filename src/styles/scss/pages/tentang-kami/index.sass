@@ -1,0 +1,20 @@
+tentang-kami
+  main
+    @include py(22)
+    @include container
+    @include d_flex
+    @include fd(col)
+    @include items(center)
+    @include justify(center)
+    @media (min-width: 625px)
+      @include max_w(125)
+      margin: auto
+    @media (min-width: 1000px)
+      max-width: 70%
+      @include py(32)
+    img
+      @include w(full)
+      @include mb(6)
+      @include max_w(100)
+    p
+      @include align(justify)
