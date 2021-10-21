@@ -84,17 +84,3 @@ const linkElement = document.createElement('link')
 linkElement.rel = 'icon'
 linkElement.href = '/src/assets/icons/brand-logo.svg'
 document.head.appendChild(linkElement)
-var atOptions = {
-  key: 'd905e08c824a51b116957eb59f07e70f',
-  format: 'iframe',
-  height: 90,
-  width: 728,
-  params: {},
-}
-document.write(
-  '<scr' +
-    'ipt type="text/javascript" src="http' +
-    (location.protocol === 'https:' ? 's' : '') +
-    '://www.effectiveperformanceformat.com/d905e08c824a51b116957eb59f07e70f/invoke.js"></scr' +
-    'ipt>'
-)
