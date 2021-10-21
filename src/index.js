@@ -84,7 +84,7 @@ const linkElement = document.createElement('link')
 linkElement.rel = 'icon'
 linkElement.href = '/src/assets/icons/brand-logo.svg'
 document.head.appendChild(linkElement)
-atOptions = {
+var atOptions = {
   key: 'd905e08c824a51b116957eb59f07e70f',
   format: 'iframe',
   height: 90,
